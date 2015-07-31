@@ -2,12 +2,12 @@
 <plugin>
 	<name>
 		<lang name="default">Все теги</lang>
-		<lang name="english">All Tags.</lang>
+		<lang name="english">All Tags</lang>
 	</name>
 	<author>
 		<lang name="default">Em</lang>
 	</author>
-	<homepage>http://nosite.com/</homepage>
+	<homepage>http://altocms.com</homepage>
      	<version>1.0</version>
 	<requires>
 	        <alto>
