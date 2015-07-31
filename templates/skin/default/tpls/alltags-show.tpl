@@ -1,7 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-body">
+   
+    <div class="form-group">
+        <input type="text" placeholder="{$aLang.search}" id="text-search" class="form-control">
+    </div>
+
         <div class="panel-content">
-			<div class="tab-pane active js-widget-tags-all">
+			<div class="js-widget-tags-all">
                 {if $aTags}
                     <ul class="list-unstyled list-inline tag-cloud word-wrap">
                         {foreach $aTags as $oTag}
@@ -22,3 +27,16 @@
         </div>
     </div>
 </div>
+
+<script>
+   $(function() {
+    $('#text-search').bind('keyup change', function(ev) {
+        var searchTerm = $(this).val();
+ 
+        $('.panel-content').removeHighlight();
+        if ( searchTerm ) {
+            $('.panel-content').highlight( searchTerm );
+        }
+    });
+});
+</script>
